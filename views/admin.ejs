@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>RRC Backend Management</title>
+    <link rel="stylesheet" href="/stylesheets/common.css"/>
+    <link rel="stylesheet" href="/stylesheets/style.css"/>
+    <style>
+        .register-btn {
+            color: #ffffff;
+            width: 100%;
+            margin-top: 18px;
+            font-size: 21px;
+            font-weight:400;
+            line-height: 40px;
+            background: darkorange;
+            border-radius: 12px;
+            text-align: center;
+            cursor: pointer;
+
+        }
+        .dialog{
+            position: fixed;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            width:100vw;
+            height: 100vh;
+            background-color: #000000;
+            opacity: .5;
+        }
+        .dialog-wrap{
+            position: absolute;
+            left: 50%;
+            top:50%;
+            z-index: 999;
+            padding: 20px;
+            width: 460px;
+            background: white;
+            border-radius: 24px;
+            transform:translate(-50%,-50%);
+        }
+        .dialog-header{
+            position: relative;
+            margin-top: 10px;
+        }
+        .dialog-header > div{
+            position: absolute;
+            right:0;
+            top: 15px;
+        }
+        .dialog-header > form > div{
+            color: #000000;
+            margin: 21px 0;
+        }
+        .dialog-header .register-form input[type=text] {
+            width: 250px;
+            height: 20px;
+            padding: 0px 10px;
+            margin-left: 20px;
+            border-radius: 12px;
+            border: 1px solid black;
+        }
+        .dialog-header .register-form input[type=password] {
+            width: 250px;
+            height: 20px;
+            padding: 0px 10px;
+            margin-left: 22px;
+            border-radius: 12px;
+            border: 1px solid black;
+        }
+        .dialog-footer{
+            text-align: center;
+            margin-top: 50px;
+        }
+        .dialog-footer button, .dialog-footer span,.dialog-footer input[type='submit']{
+            padding: 12px 22px;
+            color: white;
+            background: darkorange;
+            cursor:pointer;
+            border-radius: 12px;
+        }
+        .isRegister{
+            display: none;
+        }
+        .close{
+            margin-top: -15px;
+            cursor: pointer;
+            /*添加悬浮手指*/
+        }
+    </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+<!--       表头icon-->
+        <h3><img src="/images/111.png" alt=""></h3>
+        <div>Website Backend Management</div>
+    </header>
+<!--      登录表单-->
+    <form class="login-form" action="/admin/main" method="post">
+      <div class="form-group1">
+        <label for="">USERNAME</label>
+          <input class="inputusername" type="text" name="userName">
+      </div>
+      <div class="form-group2">
+        <label for="">PASSWORD</label>
+          <input type="password" name="userPwd">
+      </div>
+        <input type="submit" value="Login">
+        <div class="register-btn">
+            <span id="registerBtn">Don't have an account yet</span>
+        </div>
+    </form>
+  </div>
+
+<!--      注册弹窗-->
+  <div class="dialog isRegister"></div>
+      <div class="dialog-wrap isRegister">
+          <div class="dialog-header">
+              <h3>Register New Account</h3>
+              <div class="close">
+                  <p>Close</p>
+              </div>
+              <form class="register-form" action="/register" method="post">
+                  <div class="form-group1">
+                      <label for="">username</label>
+                      <input class="inputusername" type="text" name="userName">
+                  </div>
+                  <div class="form-group2">
+                      <label for="">password</label>
+                      <input type="password" name="userPwd">
+                  </div>
+                  <div class="dialog-footer">
+                      <input type="submit" value="Register">
+                  </div>
+              </form>
+          </div>
+      </div>
+
+
+</body>
+</html>
+
+<script src="/javascripts/jquery.js"></script>
+<script>
+    $(function (){
+        //显示注册表单
+        $('#registerBtn').click(function(){
+            $('.isRegister').show();
+        })
+        //隐藏注册表单
+        $('.close').click(function() {
+            $('.isRegister').hide();
+        })
+    })
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>注册成功</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color:#15151D;
+        }
+        h1 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 30px;
+            color: white;
+        }
+        button {
+            background-color: darkorange;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            width: 300px;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <h1>Registration Successful!!!</h1>
+    <h1>Welcome to RRC, <%= userName %></h1>
+    <div class="button-container">
+        <button onclick="location.href='http://localhost:3000/admin';">Return to login page</button>
+    </div>
+</div>
+</body>
+</html>

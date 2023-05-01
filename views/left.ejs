@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>RRC Backend Management</title>
+    <link rel="stylesheet" href="/stylesheets/common.css"/>
+</head>
+<style>
+    body{
+        background: #1C1C22;
+    }
+    ul{
+        list-style: none;
+    }
+    a,span{
+        color:white;
+    }
+    .nav-left h3{
+        padding: 40px;
+    }
+    .nav-left > ul{
+        padding: 0 16px;
+        cursor: pointer;
+    }
+    .nav-left > ul > li{
+        padding: 20px 0;
+        border-top: 2px solid grey;
+    }
+    .nav-left > ul > li:first-child{
+        border-top:none;
+    }
+    .menu{
+        position: relative;
+        margin: 0 20px;
+        line-height: 40px;
+        color: white;
+        border-radius: 24px;
+    }
+    .menu.active{
+        background: darkorange;
+    }
+    .menu > img:first-child{
+        margin:0 18px;
+    }
+    .menu > img:last-child {
+        position: absolute;
+        right: 24px;
+        top: 50%;
+        margin-top: 4px;
+    }
+    .nav-left > ul > li > ul > li{
+        margin-top: 20px ;
+    }
+    .out{
+        position: fixed;
+        bottom: 16px;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+        color: white;
+        background-color: darkorange;
+        cursor: pointer;
+    }
+    .icon{
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+</style>
+<body>
+<div class="nav-left">
+    <img class='icon' src="/images/111.png" alt="">
+    <ul>
+        <li>
+            <div class="menu active">
+             <img src="" alt="">
+             <span>Home</span>
+             <img src="" alt="">
+            </div>
+            <ul>
+                <li class="menu">
+                   <img src="" alt="">
+                    <a href="/bannerlist" target="right">Banner Picture</a>
+                </li>
+                <li class="menu">
+                    <img src="" alt="">
+                    <a href="/ruininfo" target="right">Ruin Info</a>
+                </li>
+                <li class="menu">
+                    <img src="" alt="">
+                    <a href="#">More Project</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="menu">
+                <img src="" alt="">
+                <span>Gallery</span>
+                <img src="" alt="">
+            </div>
+            <ul>
+                <li class="menu">
+                    <img src="" alt="">
+                    <a href="#">Portrait</a>
+                </li>
+                <li class="menu">
+                    <img src="" alt="">
+                    <a href="#">Landscape</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <div class="menu">
+                <img src="" alt="">
+                <span>About Us</span>
+                <img src="" alt="">
+            </div>
+        </li>
+    </ul>
+    <div class="out">log out</div>
+</div>
+
+<script src="/javascripts/jquery.js"></script>
+<script>
+    $(function (){
+        $('.nav-left > ul > li').click(function(){
+            //添加一级菜单样式
+            $(this).siblings().find('div.menu').removeClass('active')
+            $(this).find('div.menu').addClass('active');
+            //更换箭头样式
+            $(this).siblings().find('.down').attr('src','');
+            $(this).find('.down').attr('src','');
+            //展开收起
+            $(this).siblings().find('ul').slideUp(200);
+            $(this).find('ul').slideDown(200);
+
+        })
+    })
+</script>
+
+</body>
+</html>

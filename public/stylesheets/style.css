@@ -1,0 +1,67 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  background: url("/images/112.png") no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+  font-size: 24px;
+  font-weight: 400;
+  padding: 40px;
+}
+form.login-form{
+  padding-bottom: 100px;
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+  color: #fff;
+}
+form.login-form.form-group1{
+  display: flex;
+  justify-content: space-between;
+}
+form.login-form.form-group2{
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+form.login-form label{
+  font-size:24px;
+  font-weight: 400;
+  line-height: 60px;
+  text-align-last: justify;
+  text-align: justify;
+  text-justify:distribute-all-lines;
+}
+form.login-form input[type=text]{
+  width: 320px;
+  height: 38px;
+  padding: 0px 10px;
+  margin-left: 13px;
+  border-radius: 12px;
+}
+form.login-form input[type=password]{
+  width: 320px;
+  height: 38px;
+  padding: 0px 10px;
+  margin-left: 10px;
+  border-radius: 12px;
+}
+form.login-form input[type=submit]{
+  color: #ffffff;
+  width: 100%;
+  margin-top: 32px;
+  font-size: 21px;
+  font-weight:400;
+  line-height: 40px;
+  background: darkorange;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.inputusername{
+  margin-right: 10px;
+}

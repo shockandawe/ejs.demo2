@@ -1,0 +1,133 @@
+<html>
+<head>
+  <title>home page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #15151D;
+    }
+    .top-bar {
+      height: 70px;
+      background-color: black;
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+    }
+    .logo {
+      height: 80px;
+      width: 80px;
+      margin-right: 20px;
+    }
+    .module {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 50px;
+      color:white;
+    }
+    .module h2 {
+      font-size: 25px;
+      margin-bottom: 20px;
+    }
+    .carousel-item pic{
+      width: 60%;
+      padding: 20px;
+    }
+    .carousel {
+      display: flex;
+      justify-content: space-between;
+    }
+    .carousel-item {
+      width: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+    .carousel-item h3 {
+      font-size: 21px;
+      margin: 10px 0;
+    }
+    .carousel-item p {
+      font-size: 17px;
+      margin: 20px;
+    }
+    .top-bar{
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 30px;
+      background-color: #1B1c21;
+      border-radius: 24px;
+    }
+    .dialog{
+      position: fixed;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      top: 0;
+      width:100vw;
+      height: 100vh;
+      background-color: #000000;
+      opacity: .5;
+
+    }
+    .dialog-wrap{
+      position: absolute;
+      left: 50%;
+      top:50%;
+      z-index: 999;
+      padding: 20px;
+      width: 460px;
+      background: white;
+      border-radius: 24px;
+      transform:translate(-50%,-50%);
+    }
+    .dialog-header{
+      position: relative;
+    }
+    .dialog-header > div{
+      position: absolute;
+      right:0;
+      top: 0;
+    }
+    form > div{
+      margin:20px 0;
+    }
+    .dialog-footer{
+      text-align: right;
+      margin-top: 10px;
+    }
+    .dialog-footer button, .dialog-footer span,.dialog-footer input[type='submit']{
+      padding: 6px 10px;
+      color: white;
+      background: darkorange;
+      cursor:pointer;
+      border-radius: 12px;
+    }
+  </style>
+
+</head>
+<body>
+<div class="top-bar">
+  <img class="logo" src="public/images/111.png" alt="logo">
+  <div class="navigation">
+    <button id="loginBtn">login</button>
+    <button id="registerBtn">register</button>
+  </div>
+</div>
+<div class="module">
+  <h2>RRC Backend Website Design</h2>
+  <div class="carousel">
+    <div class="carousel-item">
+      <h3>Introduction</h3>
+      <p> For this CW3 course assignment, I used node.js + mysql + express.js to build a backend data management system. The theme is my personal service design project RRC - a ruin travel system. This is a preliminary project aimed at providing urban explorer users with a collection of ruin information databases and laying the foundation for future front-end website construction.</p>
+      <p> This is the overall structural design of the site. It contains a total of 5 front-end pages and seven functions login, registration, adding data, deleting data, modifying data, finding data, and turning pages. User registration, upload, and deleted user and ruin information will be synchronized to my mysql database through the interface. </p>
+      <div style="text-align:center;">
+        <img src="public/images/114.png" style="display:block; max-width:80%; margin-left:auto; margin-right:auto;">
+      </div>
+      <h3>My Experience</h3>
+      <p>Building an app from scratch is hard, I looked for tutorials on many video sites and finally picked up some web programming fur. I think that when designing a web application with many pages, the packaging of different express pages and path files is very necessary, so at the beginning, I imported the project into Webstorm and built the overall express framework.</p>
+      <p>After understanding the structure of the entire express application, the idea of programming will be much clearer. For example, to create a new page, you need to create a path first, then create a page, and call this path. In the writing of the front-end page, I learned more html writing, CSS language, and embedded JavaScript script function, as well as the unique syntax of express.js embedded data.</p>
+      <p>One of the most difficult points in this project is when I want to implement the function of "save and display their real-time username in the information uploaded by users". The solution I finally found was to use the express-session feature to declare the username as a global variable and set the cookie, which took me a lot of work. In general, this project has only completed the demo of two pages, and then I will continue to build the back-end and front-end websites.</p>
+    </div>
+
+</body>
+</html>
